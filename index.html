@@ -3,7 +3,15 @@
 
   <!-- ========= CONFIGURATION ========= -->
   <head>
-    <base href="/span-website/">
+    <!-- <base href="/span-website/"> -->
+    <script>
+      const isLocal =
+      location.hostname === "127.0.0.1" ||
+      location.hostname === "localhost";
+      document.write(
+        `<base href="${isLocal ? '/' : '/span-website/'}">`
+      );
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
@@ -26,20 +34,30 @@
         <a href="#home" class="nav-logo" aria-label="span home">
           <img src="images/logo_square_only.svg" alt="Logo Span">
         </a>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
         <ul class="nav-links" id="navLinks">
           <li><a href="#home" data-i18n="menu.home"></a></li>
           <li><a href="#why" data-i18n="menu.why"></a></li>       
           <li><a href="#approach" data-i18n="menu.approach"></a></li>
           <li><a href="#about" data-i18n="menu.about"></a></li>
-          <li><a href="#whom" data-i18n="menu.whom"></a></li>
-          <!--<li><a href="#contact">Contact</a></li>-->      
+          <li><a href="#whom" data-i18n="menu.whom"></a></li>     
+          <div class="mobile-only">
+            <a href="#contact" class="btn btn-primary"> <span data-i18n="menu.contact"></span> </a>
+          </div>
+          <div class="mobile-only">
+              <div class="lang-switch">
+                  <button data-lang="fr" data-i18n="configparam.lang2"></button>
+                  <button data-lang="en" data-i18n="configparam.lang1"></button>
+              </div>
+          </div>
         </ul>
-        <a href="#contact" class="btn btn-primary"><p data-i18n="menu.contact"></p></a>        
-        <div class="lang-switch">
-          <button data-lang="fr" data-i18n="configparam.lang2"></button>
-          <button data-lang="en" data-i18n="configparam.lang1"></button>
-      </div>
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-primary"><p data-i18n="menu.contact"></p></a>        
+          <div class="lang-switch desktop-lang">
+            <button data-lang="fr" data-i18n="configparam.lang2"></button>
+            <button data-lang="en" data-i18n="configparam.lang1"></button>
+          </div>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>        
       </nav>
     </header>
 
@@ -306,7 +324,7 @@
       <!-- ---- SECTION: ABOUT ---- -->
       <section class="section-pad" id="about">
         <div class="container about-grid">
-          <div class="about-photo reveal">
+ <!--         <div class="about-photo reveal">
             <svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
               <g stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none">
                 <line x1="80" y1="120" x2="200" y2="200"/>
@@ -323,19 +341,49 @@
               <circle cx="280" cy="360" r="6" fill="#74C365"/>
               <circle cx="590" cy="170" r="6" fill="#F1F5F9"/>
             </svg> 
-            <img src="images/about_photo.png" alt="Photo Span">
+            <img class="photo-miroir" src="images/about_photo.png" alt="Photo Span">
+          </div>
+        -->
+
+          <div class="about-wrapper reveal">
+
+            <svg class="network" viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="rgba(116,195,101,0.45)" stroke-width="1.2" fill="none">
+                <line x1="40"  y1="50"  x2="100" y2="120"/>
+                <line x1="100" y1="120" x2="30"  y2="290"/>
+                <line x1="100"  y1="120" x2="350" y2="70"/>
+                <line x1="350" y1="70" x2="480" y2="170"/>
+                <line x1="30" y1="290" x2="-30" y2="370"/>
+                <line x1="350" y1="70" x2="495" y2="100"/>
+                <line x1="100" y1="120" x2="470" y2="350"/>
+              </g>
+              <circle cx="40"  cy="50"  r="6" fill="#74C365"/>
+              <circle cx="100" cy="120" r="6" fill="#1AA7A1"/>
+              <circle cx="30" cy="290" r="6" fill="#74C365"/>
+              <circle cx="350" cy="70" r="6" fill="#1AA7A1"/>
+              <circle cx="480" cy="170" r="6" fill="#74C365"/>
+              <circle cx="-30" cy="370" r="5" fill="#1AA7A1"/>
+              <circle cx="495" cy="100" r="6" fill="#74C365"/>
+              <circle cx="470" cy="350" r="6" fill="#74C365"/>
+            </svg>
+
+            <img class="photo-miroir" src="images/about_photo.png" alt="Photo Span">
+
           </div>
 
           <div class="about-text reveal">
             <span class="eyebrow" data-i18n="about.title"></span>
             <h2 data-i18n="about.subtitle"></h2>
             <p data-i18n="about.text_part1"></p>
+            <p><br></p>
             <p>
               <span data-i18n="about.text_part2a"></span> 
               <span class="highlight" data-i18n="about.text_part2b"></span>
               <span data-i18n="about.text_part2c"></span> 
             </p>  
+            <p><br></p>
             <p data-i18n="about.text_part3"></p>
+            <p><br></p>
             <p data-i18n="about.text_part4"></p>
             <p><br></p>
             <p>            

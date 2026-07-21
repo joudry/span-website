@@ -3,7 +3,15 @@
 
 <!-- ========= CONFIGURATION ========= -->
 <head>
-  <base href="/span-website/">
+  <!-- <base href="/span-website/"> -->
+  <script>
+    const isLocal =
+    location.hostname === "127.0.0.1" ||
+    location.hostname === "localhost";
+    document.write(
+      `<base href="${isLocal ? '/' : '/span-website/'}">`
+    );
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
@@ -24,14 +32,22 @@
       <a href="index.html" class="nav-logo" aria-label="span home">
         <img src="images/logo_square_only.svg" alt="Logo Span">
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" data-i18n="menu.home"></a></li>   
+        <li><a href="index.html" data-i18n="menu.home"></a></li>
+        <div class="mobile-only">
+            <div class="lang-switch">
+                <button data-lang="fr" data-i18n="configparam.lang2"></button>
+                <button data-lang="en" data-i18n="configparam.lang1"></button>
+            </div>
+        </div>   
       </ul>
-      <div class="lang-switch">
-        <button data-lang="fr" data-i18n="configparam.lang2"></button>
-        <button data-lang="en" data-i18n="configparam.lang1"></button>
+      <div class="nav-cta">
+        <div class="lang-switch desktop-lang">
+          <button data-lang="fr" data-i18n="configparam.lang2"></button>
+          <button data-lang="en" data-i18n="configparam.lang1"></button>
+        </div>
       </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>      
     </nav>
   </header>
 
