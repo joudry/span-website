@@ -43,7 +43,7 @@
   .container{max-width:var(--max-w); margin:0 auto; padding:0 32px;}
   section{padding:0;}
   .section-pad{padding:96px 0;}
-  @media(min-width:900px){ .section-pad{padding: calc(var(--section-gap)/2) 0;} }
+  @media(min-width: 768px){ .section-pad{padding: calc(var(--section-gap)/2) 0;} }
 
   .eyebrow{
     display:inline-block; font-size:13px; font-weight:700; letter-spacing:0.14em;
@@ -177,7 +177,7 @@
     margin-top:4px;
   }
 
-  @media(max-width: 900px){
+  @media(max-width: 768px){
     .nav-links{
       position:fixed; top:75px; left:0; right:0; bottom:0; background:var(--bg); 
       flex-direction:column; align-items:flex-start; 
@@ -228,7 +228,7 @@
     opacity:0.9;
   }
  
-  @media(max-width:900px){
+  @media(max-width: 768px){
     .hero-grid{ grid-template-columns:1fr; justify-items:center;}
     .hero-visual{ 
       order:-1; 
@@ -343,7 +343,7 @@
   .triad-dot{ width:14px; height:14px; border-radius:50%; margin-bottom:18px; }
   .triad-card h3{ font-size:20px; letter-spacing:0.02em; text-align: start;}
   .triad-card p{ margin-top:10px; color:var(--text-soft); font-size:15px; }
-  @media(max-width:800px){ .triad{ grid-template-columns:1fr; } }
+  @media(max-width: 768px){ .triad{ grid-template-columns:1fr; } }
 
   /* Section 4: timeline */
   .timeline-wrap{ overflow-x:auto; padding-bottom:12px; margin-top:64px; }
@@ -366,8 +366,8 @@
   .systhinking-grid{
     display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:56px;
   }
-  @media(max-width:900px){ .systhinking-grid{ grid-template-columns:repeat(2,1fr); } }
-  @media(max-width:520px){ .systhinking-grid{ grid-template-columns:1fr; } }
+  @media(max-width: 768px){ .systhinking-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media(max-width: 520px){ .systhinking-grid{ grid-template-columns:1fr; } }
 
   /* Icon according to the lang */
   .icon-en, .icon-fr {
@@ -397,7 +397,7 @@
   .net-node text{ font-family:'Manrope',sans-serif; font-weight:700; pointer-events:none; }
   .net-line{ stroke-dasharray:340; stroke-dashoffset:340; animation:draw 1.6s ease forwards; }
   @keyframes draw{ to{ stroke-dashoffset:0; } }
-  @media(max-width:900px){ .network-layout{ grid-template-columns:1fr; } }
+  @media(max-width: 768px){ .network-layout{ grid-template-columns:1fr; } }
 
   /* Section 5: about */
   .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:90px; align-items:center; }
@@ -425,8 +425,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top:70px;    
-    
+    margin-top:70px;        
   }
 
   .network {
@@ -462,7 +461,39 @@
     );   
   }
 
-  @media(max-width:900px){ .about-grid{ grid-template-columns:1fr; } }
+  @media(max-width: 768px){ 
+    .about-grid{
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .about-wrapper {
+      width: 320px;
+      margin: 30px auto 0;
+    }
+
+    .photo-miroir {
+      width: 320px;
+      max-width: 75%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-grid{
+      gap: 24px;
+    }
+
+    .about-wrapper {
+      width: 240px;
+      margin-top: 20px;
+    }
+
+    .photo-miroir {
+      width: 240px;
+      max-width: 70%;
+    }
+  }
 
   /* Section 6: whom */
   .whom{ text-align:center; background:var(--bg-alt);}
@@ -495,8 +526,8 @@
   
   .cta-grid:hover{ transform:translateY(-5px); box-shadow:0 16px 34px -12px rgba(20,33,61,0.16); }
   
-  .cta-grid-contact p{ margin-top:16px; color:var(--Teal300); font-size:24px; text-align: center;}
-  @media(max-width:900px){ .about-grid{ grid-template-columns:1fr; } }
+  .cta-grid-contact p{ margin-top:16px; color:var(--Teal300); font-size:18px; text-align: center;}
+  @media(max-width: 768px){ .about-grid{ grid-template-columns:1fr; } }
   
   /* ---------- cycle ---------- */
   .cycle-wrap{ max-width:var(--max); margin:0 auto; }
@@ -529,7 +560,7 @@
   .cycle-step .num{ font-family:'IBM Plex Mono'; font-size:12px; color:var(--bg); margin-bottom:6px; }
   .cycle-step .label{ font-size:16px; font-weight:500; color:var(--bg-alt); line-height:1.4; }
 
-  @media (max-width:800px){
+  @media (max-width: 768px){
     .cycle-track{ flex-direction:column; gap:28px; align-items:center; }
     .cycle-track::before{ display:none; }
     .cycle-step{ width:100%; flex-direction:row; text-align:left; gap:32px;  }
