@@ -34,6 +34,7 @@
     line-height:1.55;
     -webkit-font-smoothing:antialiased;
   }
+  html, body{ overflow-x: hidden; }
   h1,h2,h3,h4{font-weight:700; margin:0; letter-spacing:-0.02em; color:var(--navy-deep);}
   p{margin:0;text-align: justify;}
   p1{margin:0;text-align: center;}
@@ -114,16 +115,26 @@
   }    
   .nav{
     display:flex; align-items:center; justify-content:space-between;
-    padding:8px 0px; max-width:var(--max-w); margin:0 auto;
+    padding:8px clamp(12px, 4vw, 24px); /* un peu de padding latéral, pas 0 */
+    max-width:var(--max-w); margin:0 auto;
+    gap: 8px;
   }
+  
   .nav-logo{ 
-    flex:0 0 auto; /* flex-shrink: 0;le logo garde sa taille, ne rétrécit pas */
+    flex: 0 1 auto;  /* autorise à rétrécir si besoin, au lieu de flex:0 0 auto */
+    min-width: 0;    /* indispensable pour qu'un flex item puisse réellement rétrécir */
     display:flex; 
     align-items:center; 
     gap:10px; 
   }
+  
   .nav-logo svg{ width:clamp(88px, 22vw, 120px); height:auto; }
-  .nav-logo img{ width:20%; height:auto; }
+  .nav-logo img{ 
+    width: clamp(60px, 18vw, 100px);
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
   
   .nav-links{ 
     flex: 1; /* prend tout l'espace restant entre logo et boutons */
