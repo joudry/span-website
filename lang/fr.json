@@ -128,7 +128,8 @@
             "Amélioration de l'efficacité des projets", 
             "Communication plus fluide", 
             "Engagement renforcé des équipes"
-        ] 
+        ],
+        "nodecenter_title": "span"
     }, 
         
     "about":{ 
