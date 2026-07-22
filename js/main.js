@@ -5,7 +5,18 @@
   // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
+  const scrollHint = document.getElementById('scrollHint');
+
+  function updateScrollHint() {
+    if (!navLinks || !scrollHint) return;
+    const atBottom = navLinks.scrollTop + navLinks.clientHeight >= navLinks.scrollHeight - 5;
+    const needsScroll = navLinks.scrollHeight > navLinks.clientHeight;
+    scrollHint.style.opacity = (atBottom || !needsScroll) ? '0' : '1';
+  }
+
+  navLinks.addEventListener('scroll', updateScrollHint);
   navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navToggle.addEventListener('click', () => setTimeout(updateScrollHint, 50)); // léger délai pour laisser le menu s'afficher;
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
   // Scroll reveal (falls back to fully visible if IntersectionObserver isn't available)
@@ -36,6 +47,7 @@
         ul.appendChild(li);
       });
     }
+
   }
 
   // Network hover/focus interactions
@@ -54,21 +66,6 @@
       fillBlock(1, node.dataset.text1title, node.dataset.i18nList1);
       fillBlock(2, node.dataset.text2title, node.dataset.i18nList2);
 
-      // Récupère la clé du tableau à partir de l'attribut data-i18n-list
-      //const listKey = node.dataset.i18nList; // "approach.node1_testitems"
-      //const items = listKey
-        //? listKey.split(".").reduce((obj, i) => obj?.[i], currentTranslations)
-        //: null;
-
-      //const ul = netDesc.querySelector(".node-textitems");
-      //ul.innerHTML = ""; // vide la liste précédente
-      //if (Array.isArray(items)) {
-        //items.forEach(text => {
-          //const li = document.createElement("li");
-          //li.textContent = text;
-          //ul.appendChild(li);
-        //});
-      //}
     };
     
     const hide = () => {
