@@ -63,73 +63,93 @@
         "subtitle": "Integrated support, from technology to market",
         "text1_part1": "Turning innovation into a robust, compliant, and market-ready system requires structured engineering, clear governance, and operational excellence. Alignment between technology, product and market is essential.",
         "text1_part2": "span", 
-        "text1_part3": "provides additional technical expertise through complementary solutions:",
+        "text1_part3": "provides additional technical expertise through complementary solutions combining technology, clinical, regulatory and organizational perspectives:",
         "network_intro1": "Explore the network",
         "network_intro2": "Hover or focus on any node to learn how that discipline connects into span's systemic approach.",
-        "node1_title": "IDEATION & RESEARCH",
-        "node1_subtitle": "IDEATION & RESEARCH",
+        "node1_title": "IDEATION & INSIGHTS",
+        "node1_subtitle": "IDEATION & INSIGHTS",
         "node1_text1_title": "Key activities",
         "node1_text1_items": [          
             "Technology and competitive intelligence",
             "User and stakeholder needs assessment",
             "Ideation and innovation workshops",
-            "Clinical partner identification"
+            "Clinical and strategic partner identification",
+            "Opportunity assessment" 
         ],
         "node1_text2_title": "Outcomes",
         "node1_text2_items": [
-            "Enhancing customer engagement",
-            "Clearer market focus",
-            "Cutting-edge solutions"
+            "Validated unmet needs", 
+            "Prioritized innovation opportunities", 
+            "Clear product vision", 
+            "Strategic ecosystem established", 
+            "Strong foundations for development"
         ],
-        "node2_title": "STRATEGY",
-        "node2_subtitle": "STRATEGY",
+        "node2_title": "STRATEGY & PLANNING",
+        "node2_subtitle": "STRATEGY & PLANNING",
         "node2_text1_title": "Key activities",
         "node2_text1_items": [          
+            "Product development strategy",
             "Regulatory strategy and clinical affairs support",
             "Verification and Validation strategy",
-            "Strategy workshops",
-            "R&D processes to support quality management system"
+            "Quality-oriented R&D process definition",
+            "Strategic decision-making workshops"
         ],
         "node2_text2_title": "Outcomes",
         "node2_text2_items": [
-            "Improvement of market access",
-		    "Preclinical and Clinical evidence",
-		    "Scalable processes"
+            "Development roadmap", 
+            "Preclinical and Clinical evidence",
+            "Verification & Validation plan", 
+            "Scalable R&D quality processes", 
+            "Reduced development risks"
         ],
         "node3_title_line1": "CONCEPT & DESIGN",
         "node3_title_line2": "DEVELOPMENT",
         "node3_subtitle": "CONCEPT & DESIGN DEVELOPMENT",
         "node3_text1_title": "Key activities",
         "node3_text1_items": [          
-            "Accompaniement in the definition and perimeter of proof-of-concept (PoC) / prototype / MVP (5W1H approach, etc.)",
-            "Technical audit",
+            "Definition and scoping of proof-of-concept (PoC) / prototype / MVP (5W1H approach, etc.)",
+            "Technical audits",
             "Technical documentation review",
-            "Risk analysis"
+            "Risk management",
+            "Design review"
         ],
         "node3_text2_title": "Outcomes",
         "node3_text2_items": [
-            "Customer satisfaction",
-		    "Solid competitive position",
-		    "Patient safety",
-		    "Product quality"
+            "Robust product concept", 
+            "Controlled technical risks", 
+            "Verified design decisions", 
+            "Improved product quality", 
+            "Increased patient safety"
         ],
-        "node4_title": "ORGANIZATION",
-        "node4_subtitle": "ORGANIZATION",
+        "node4_title_line1": "PROJECT INTEGRATION",
+        "node4_title_line2":"& GOVERNANCE",
+        "node4_subtitle": "PROJECT INTEGRATION & GOVERNANCE",        
         "node4_text1_title": "Key activities",
         "node4_text1_items": [          
-            "Team alignment and board consultation",
-		    "Subcontractors and partners coordination",
-		    "Transverse project management and software tool",
-		    "Integration: project plan, governance, etc.",
-		    "Product lifecycle structuring"
+            "Cross-functional project management", 
+            "Team alignment and executive facilitation", 
+            "Partner and subcontractor coordination", 
+            "Governance implementation", 
+            "Project planning and monitoring", 
+            "Product lifecycle structuring"
         ],
         "node4_text2_title": "Outcomes",
         "node4_text2_items": [
-            "Improved project efficiency",
-		    "More effective communication",
-		    "Stronger team engagement"
+            "Integrated project execution", 
+            "Faster and better-informed decisions", 
+            "Strong multidisciplinary alignment", 
+            "Efficient collaboration", 
+            "Accelerated time-to-market"
         ],
-        "nodecenter_title": "span"
+        "nodecenter_title": "span",
+        "text2": "Unlike traditional consulting focused on a single discipline, my approach integrates every critical dimension of innovation throughout the project lifecycle. The objective is to ensure that every decision strengthens the overall project rather than optimizing one discipline at the expense of another.",
+        "text3": "I help organizations:",
+        "text3_item1": "navigate complexity with confidence,", 
+        "text3_item2": "align multidisciplinary teams around a shared vision,",
+        "text3_item3": "anticipate technical, clinical and regulatory risks,", 
+        "text3_item4": "structure robust development processes,", 
+        "text3_item5": "accelerate innovation while improving quality and patient safety."
+        
     },
 
     "about":{

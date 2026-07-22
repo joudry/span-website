@@ -300,7 +300,10 @@
                     data-i18n-list2="approach.node4_text2_items"
                   >
                     <circle cx="112.5" cy="337.5" r="24" fill="#74C365"/>
-                    <text x="112.5" y="401" text-anchor="middle" font-size="20" fill="#14213D" data-i18n="approach.node4_title"></text>
+                    <text x="112.5" y="385" text-anchor="middle" font-size="20" fill="#14213D">
+                      <tspan x="112.5" dy="0" data-i18n="approach.node4_title_line1"></tspan>
+                      <tspan x="112.5" dy="32" data-i18n="approach.node4_title_line2"></tspan>
+                    </text> 
                   </g>
 
                   <circle cx="260" cy="210" r="36" fill="#0B2D5C"/>
@@ -326,33 +329,28 @@
             </div>  
           </div>
 
+          <div class="container">
+            <p class="section-sub">
+              <span><br><br><br></span>
+              <span data-i18n="approach.text2"></span>
+              <span><br><br></span>
+              <span data-i18n="approach.text3"></span>              
+              <span><br><br></span>
+              <ul class="clientwithme">
+                <li data-i18n="approach.text3_item1"></li>
+                <li data-i18n="approach.text3_item2"></li>
+                <li data-i18n="approach.text3_item3"></li>
+                <li data-i18n="approach.text3_item4"></li>
+                <li data-i18n="approach.text3_item5"></li>
+              </ul> 
+            </p> 
+          </div>
         </div>
       </section>
 
       <!-- ---- SECTION: ABOUT ---- -->
       <section class="section-pad" id="about">
         <div class="container about-grid">
- <!--         <div class="about-photo reveal">
-            <svg viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
-              <g stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none">
-                <line x1="80" y1="120" x2="200" y2="200"/>
-                <line x1="200" y1="200" x2="320" y2="140"/>
-                <line x1="200" y1="200" x2="150" y2="330"/>
-                <line x1="200" y1="200" x2="280" y2="360"/>
-                <line x1="150" y1="330" x2="280" y2="360"/>
-                <line x1="320" y1="140" x2="590" y2="170"/>
-              </g>
-              <circle cx="80" cy="120" r="6" fill="#74C365"/>
-              <circle cx="320" cy="140" r="6" fill="#1AA7A1"/>
-              <circle cx="200" cy="200" r="9" fill="#fff"/>
-              <circle cx="150" cy="330" r="6" fill="#1AA7A1"/>
-              <circle cx="280" cy="360" r="6" fill="#74C365"/>
-              <circle cx="590" cy="170" r="6" fill="#F1F5F9"/>
-            </svg> 
-            <img class="photo-miroir" src="images/about_photo.png" alt="Photo Span">
-          </div>
-        -->
-
           <div class="about-wrapper reveal">
 
             <svg class="network" viewBox="0 0 500 700" xmlns="http://www.w3.org/2000/svg">
@@ -380,8 +378,9 @@
           </div>
 
           <div class="about-text reveal">
-            <span class="eyebrow" data-i18n="about.title"></span>
+            <span class="eyebrow" data-i18n="about.title"></span>            
             <h2 data-i18n="about.subtitle"></h2>
+            <p><br></p>
             <p data-i18n="about.text_part1"></p>
             <p><br></p>
             <p>

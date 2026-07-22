@@ -63,73 +63,93 @@
         "subtitle": "Un accompagnement intégré, de la technologie au marché", 
         "text1_part1": "Transformer une innovation en un système robuste, conforme et prêt pour le marché nécessite une ingénierie structurée, une gouvernance claire et une excellence opérationnelle. L'alignement entre technologie, produit et marché est essentiel.", 
         "text1_part2": "span", 
-        "text1_part3": "apporte une expertise technique complémentaire à travers des solutions adaptées:", 
+        "text1_part3": "apporte une expertise technique complémentaire à travers des solutions adaptées combinant les dimensions technologique, clinique, réglementaire et organisationnelle:", 
         "network_intro1": "Explorez le canva", 
         "network_intro2": "Survolez ou sélectionnez un nœud pour découvrir comment chaque discipline s'intègre dans l'approche systémique de span.", 
-        "node1_title": "IDÉATION & RECHERCHE", 
-        "node1_subtitle": "IDÉATION & RECHERCHE", 
-        "node1_text1_title": "Accompagnement", 
+        "node1_title": "IDÉATION & EXPLORATION", 
+        "node1_subtitle": "IDÉATION & EXPLORATION", 
+        "node1_text1_title": "Activités clés", 
         "node1_text1_items": [ 
             "Veille technologique et analyse concurrentielle", 
             "Analyse des besoins des utilisateurs et des parties prenantes", 
             "Ateliers d'idéation et d'innovation", 
-            "Identification de partenaires cliniques" 
+            "Identification de partenaires cliniques et stratégiques",
+            "Évaluation des opportunités d'innovation"
         ], 
         "node1_text2_title": "Résultats obtenus", 
         "node1_text2_items": [ 
-            "Renforcement de l'engagement client", 
-            "Un positionnement marché plus clair", 
-            "Innovation et technologies de pointe" 
+            "Besoins utilisateurs clarifiés et priorisés",
+            "Opportunités d'innovation identifiées",
+            "Vision produit consolidée",
+            "Écosystème de partenaires structuré",
+            "Bases solides pour le développement"
         ], 
-        "node2_title": "STRATÉGIE", 
-        "node2_subtitle": "STRATÉGIE", 
-        "node2_text1_title": "Accompagnement", 
+        "node2_title": "STRATÉGIE & PLANIFICATION", 
+        "node2_subtitle": "STRATÉGIE & PLANIFICATION", 
+        "node2_text1_title": "Activités clés", 
         "node2_text1_items": [ 
-            "Appui à la stratégie réglementaire et aux affaires cliniques", 
-            "Contribution à la stratégie de vérification et validation", 
-            "Ateliers stratégiques", 
-            "Processus R&D pour soutenir le système de management de la qualité" 
+            "Contribution à la stratégie de développement produit",
+            "Appui à la stratégie réglementaire et aux affaires cliniques",
+            "Contribution à la stratégie de Vérification & Validation (V&V)",
+            "Structuration des processus R&D en cohérence avec le système de management de la qualité",
+            "Animation d'ateliers stratégiques et d'aide à la décision"
         ], 
         "node2_text2_title": "Résultats obtenus", 
         "node2_text2_items": [ 
-            "Amélioration de l'accès au marché", 
-            "Niveau de preuve préclinique et clinique renforcé", 
-            "Processus robustes et évolutifs" 
+            "Feuille de route de développement claire",
+            "Stratégie réglementaire et clinique consolidée",
+            "Plan de Vérification & Validation structuré",
+            "Processus R&D évolutifs et robustes",
+            "Réduction des risques de développement"
         ], 
-        "node3_title_line1": "CONCEPT & DESIGN",
-        "node3_title_line2": "DEVELOPMENT",
+        "node3_title_line1": "CONCEPTION & ",
+        "node3_title_line2": "DÉVELOPPEMENT",
         "node3_subtitle": "CONCEPTION & DÉVELOPPEMENT", 
-        "node3_text1_title": "Accompagnement", 
+        "node3_text1_title": "Activités clés", 
         "node3_text1_items":[ 
-            "Accompagnement dans la définition et le périmètre de preuve de concept (PoC), de prototype ou de MVP (approche QQOQCCP, etc.)", 
-            "Audit technique", 
-            "Revue de la documentation technique", 
-            "Analyse des risques" 
+            "Définition du périmètre et des objectifs de preuve de concept (PoC), de prototype ou de MVP (approche QQOQCCP, etc.)",
+            "Évaluation de la faisabilité technique",
+            "Audits techniques",
+            "Revue de la documentation technique",
+            "Analyse et maîtrise des risques",
+            "Revues de conception"
         ], 
         "node3_text2_title": "Résultats obtenus", 
         "node3_text2_items": [ 
-            "Satisfaction client", 
-            "Position concurrentielle solide", 
-            "Sécurité des patients", 
-            "Qualité du produit" 
+            "Concept produit robuste et maîtrisé",
+            "Risques techniques anticipés et réduits",
+            "Décisions de conception sécurisées",
+            "Amélioration de la qualité du produit",
+            "Renforcement de la sécurité des patients"
         ], 
-        "node4_title": "ORGANISATION", 
-        "node4_subtitle": "ORGANISATION", 
-        "node4_text1_title": "Accompagnement", 
+        "node4_title_line1": "INTÉGRATION & GOUVERNANCE",
+        "node4_title_line2":"DE PROJET",
+        "node4_subtitle": " INTÉGRATION & GOUVERNANCE DE PROJET", 
+        "node4_text1_title": "Activités clés", 
         "node4_text1_items":[ 
-            "Alignement des équipes et accompagnement de la gouvernance", 
-            "Coordination des sous-traitants et partenaires", 
-            "Gestion de projet transverse et outils logiciels", 
-            "Intégration : plan projet, gouvernance, etc.", 
-            "Structuration du cycle de vie produit" 
+            "Management de projet transverse",
+            "Alignement des équipes et accompagnement des instances de gouvernance",
+            "Coordination des partenaires et sous-traitants",
+            "Mise en place de la gouvernance projet",
+            "Planification, pilotage et suivi de projet",
+            "Structuration du cycle de vie du produit"
         ], 
         "node4_text2_title": "Résultats obtenus", 
         "node4_text2_items":[ 
-            "Amélioration de l'efficacité des projets", 
-            "Communication plus fluide", 
-            "Engagement renforcé des équipes"
+            "Exécution de projet intégrée et maîtrisée",
+            "Décisions plus rapides et plus pertinentes",
+            "Alignement des équipes multidisciplinaires",
+            "Collaboration renforcée",
+            "Accélération de la mise sur le marché"
         ],
-        "nodecenter_title": "span"
+        "nodecenter_title": "span",
+        "text2": "Contrairement à une approche centrée sur une seule expertise, j'interviens à l'interface des dimensions essentielles d'un projet d'innovation afin de garantir leur cohérence tout au long du développement.",
+        "text3": "J'accompagne les organisations pour :",
+        "text3_item1": "maîtriser la complexité des projets multidisciplinaires,", 
+        "text3_item2": "aligner les enjeux technologiques, cliniques, réglementaires et organisationnels,",
+        "text3_item3": "anticiper les risques dès les premières phases de développement,", 
+        "text3_item4": "structurer des projets robustes et évolutifs,", 
+        "text3_item5": "accélérer l'innovation tout en garantissant la qualité, la conformité et la sécurité des patients."
     }, 
         
     "about":{ 

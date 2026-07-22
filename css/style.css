@@ -153,7 +153,7 @@
   .nav-links::after{
     content: '';
     position: sticky;
-    top: 10px;
+    top: 1px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -240,8 +240,13 @@
     margin-top:4px;
   }
 
-  .mobile-only a::before::not(:last-child){
-    display: none;
+  .mobile-only .nav-links a:not(:last-child)::before{
+    content: '•';
+    color: var(--turquoise);
+    font-size: 18px;
+    line-height: 1;
+    margin-right: 10px;
+    display: inline-block;
   }
 
   .mobile-only .scroll-hint {
@@ -514,6 +519,25 @@
     color: var(--navy);
   }
 
+  .clientwithme ul{
+    list-style-type:none;
+    padding: 0;
+    margin: 20px;
+    color: var(--text-soft);
+    list-style-position : outside;
+  }
+  .clientwithme li{
+    padding-left: 160px;
+    text-align: justify;      
+  }
+  .clientwithme li::before{
+    content: "•";
+    padding-right: 0px;
+    position: absolute;
+    left: 540px;         
+    color: var(--text-soft);
+  }
+  
   .network-canvas{ position:relative; }
   .network-canvas svg{ width:100%; height:auto; overflow:visible; }
   .net-node{ cursor:pointer; }
@@ -526,21 +550,6 @@
 
   /* Section 5: about */
   .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:90px; align-items:center; }
-
-  /*
-  .about-photo{
-    aspect-ratio:1; border-radius:24px; overflow:hidden; position:relative;
-    background:linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 55%, #061831 100%);
-    margin-top:25px;
-  }
-  .about-photo svg{ position:absolute; inset:0; width:70%; height:70%; opacity:0.9; }
-  .about-photo img{ width:140%; height:auto; border-radius:20px; margin-top:170px;padding:60px}
-  .about-text p{ margin-top:16px; color:var(--text-soft); font-size:16px; }
-  .about-text h2{ font-size:clamp(24px,3vw,32px); margin-bottom:6px; }
-  
-  .photo-miroir{
-    transform: scaleX(-1);
-  }*/
 
   .about-wrapper {
     position: relative;
@@ -585,6 +594,9 @@
       transparent 100%
     );   
   }
+  
+  .about h2{ font-size:clamp(26px,3vw,34px); }
+  .about p{ margin-top:14px; font-size:clamp(15px, 3.6vw, 17px); color:var(--text-soft); text-align:justify;}
 
   @media(max-width: 768px){ 
     .about-grid{
