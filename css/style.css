@@ -150,19 +150,13 @@
     padding: 0;    
   }
 
-  .nav-links::after{
-    content: '';
-    position: sticky;
-    top: 1px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 30px;
-    background: linear-gradient(to bottom, transparent, #cef1f0); /* adapte la couleur à ton fond de menu */
-    pointer-events: none;
-    margin-top: -30px;
-    display: block;
+  @media(max-width: 900px){
+    .nav-links{
+      position:relative; /* nécessaire pour positionner .scroll-hint en sticky/absolute dedans */
+    }
   }
+
+  
 
   .nav-links a{
     font-size:15px; 
@@ -182,7 +176,11 @@
     font-size:18px;
     line-height:1;
     margin-right:10px;
-    display:inline-block;
+    display:inline-block;    
+  }
+  /* Annule la puce pour le bouton CTA */
+ .nav-links a.btn-primary::before{
+    content: none;
   }
 
   .nav-links li{
@@ -198,17 +196,7 @@
     content:none !important;
   }
 
-  .scroll-hint {
-    text-align: center;
-    padding: 4px 0;
-    color: #999;
-    animation: bounce 1.5s infinite;
-    position: sticky;
-    bottom: 0;
-    background: #fff; /* adapte à ton fond */
-    transition: opacity 0.2s ease;
-    display:none;
-  }
+  
   
   .nav-cta{ 
     display:flex; 
@@ -217,15 +205,44 @@
     flex:0 0 auto;
   }
   
-  .nav-toggle{ 
-    display:none; 
-    background:none; 
-    border:none; 
-    cursor:pointer; 
-    padding:10px;
+  .nav-toggle{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    width:44px;
+    height:44px;
+    padding:0;
+    background:none;
+    border:none;
+    cursor:pointer;
     flex-shrink:0;
-  } 
-  .nav-toggle span{ display:block; width:32px; height:2px; background:var(--navy); margin:10px 0; border-radius:2px;}
+  }
+  .nav-toggle span{
+    display:block;
+    width:24px;
+    height:2px;
+    margin:0;
+    background:var(--navy);
+    border-radius:2px;
+  }
+
+  /* Animation des barres en croix */
+  .nav-toggle span{
+    transition: transform .3s ease, opacity .2s ease;
+  }
+
+  /* Quand le bouton est ouvert (classe "open" ajoutée en JS) */
+  .nav-toggle.open span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-toggle.open span:nth-child(2){
+    opacity: 0;
+  }
+  .nav-toggle.open span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
 
   .mobile-only{
     display:none;
@@ -233,11 +250,19 @@
   .mobile-only .btn-primary{
     margin-left:28px;
     margin-top:4px;
-    width:80%
+    width:75%
   }
   .mobile-only .lang-switch{
+    display:flex;
+    gap:0; 
     margin-left:12px;
-    margin-top:4px;
+    margin-top:0px;
+  }
+  .mobile-only .lang-switch button {
+    padding: 4px 8px;    /* espace égal des deux côtés */
+  }
+  .mobile-only .lang-switch button:not(:last-child){
+    border-right: 2px solid #ccc;
   }
 
   .mobile-only .nav-links a:not(:last-child)::before{
@@ -249,17 +274,7 @@
     display: inline-block;
   }
 
-  .mobile-only .scroll-hint {
-    text-align: center;
-    padding: 4px 0;
-    color: #999;
-    animation: bounce 1.5s infinite;
-    position: sticky;
-    bottom: 0;
-    background: #fff; /* adapte à ton fond */
-    transition: opacity 0.2s ease;
-    display: flex;
-  }
+  
 
   @keyframes bounce {
     0%, 100% { transform: translateY(0); }
@@ -275,8 +290,40 @@
       justify-content:flex-start;
       overflow-y:auto;
       transform:translateX(100%); transition:transform .3s ease; /* display: none;*/ /* caché par défaut */
-      background:var(--Teal300);
+      background:var(--Teal300);    
+
+      /* --- Masque dynamique --- */
+      -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        black 24px,
+        black calc(100% - 16px),
+        transparent 100%
+      );
+      mask-image: linear-gradient(
+        to bottom,
+        transparent 0,
+        black 24px,
+        black calc(100% - 16px),
+        transparent 100%
+      );
+
+      /* --- Scrollbar fine --- */
+      scrollbar-width: thin;
+      scrollbar-color: var(--turquoise) transparent;
     }
+  
+    .nav-links::-webkit-scrollbar{
+      width: 4px;
+    }
+    .nav-links::-webkit-scrollbar-track{
+      background: transparent;
+    }
+    .nav-links::-webkit-scrollbar-thumb{
+      background: var(--turquoise);
+      border-radius: 4px;
+    }
+
     .nav-links.open{ transform:translateX(0); background:#cef1f0}/*.nav-links.open{ display: flex; } */ /* apparaît d'un coup au clic */
     .nav-links .btn-primary span{
         color:white;
@@ -284,14 +331,15 @@
     }
     .nav-cta .btn-primary{ display:none; }
     .nav-cta { display:none; }
-    .nav-toggle{ display:block; }
+    .nav-toggle{ display:flex; }
     .desktop-lang{ display:none;}
     .mobile-only{ display:block;}
     .mobile-only .lang-switch{ display:flex; gap:15px; margin-top:20px; margin-left:28px;}
   }
 
-  @media(max-width: 380px){
-    .nav-toggle span{ width:26px; margin:8px 0; }
+  @media(max-width: 380px){    
+    .nav-toggle{ width:38px; height:38px; gap:5px; }
+    .nav-toggle span{ width:20px; }
   }
 
   /* Hero */
@@ -395,15 +443,15 @@
     list-style-position : outside;
   }
   li{
+    position:relative;
     padding-left: 28px;
-    text-align: justify;      
+    text-align: justify;
   }
   li::before{
     content: "•";
-    padding-right: 10px;
-    content: "•";
     position: absolute;
-    left: 40px;         
+    left: 0;
+    top: 0;
     color: var(--text-soft);
   }
   
@@ -527,14 +575,14 @@
     list-style-position : outside;
   }
   .clientwithme li{
+    position:relative;
     padding-left: 160px;
     text-align: justify;      
   }
   .clientwithme li::before{
     content: "•";
-    padding-right: 0px;
     position: absolute;
-    left: 540px;         
+    left: 130px;
     color: var(--text-soft);
   }
   
@@ -547,6 +595,10 @@
   .net-line{ stroke-dasharray:340; stroke-dashoffset:340; animation:draw 1.6s ease forwards; }  
   @keyframes draw{ to{ stroke-dashoffset:0; } }
   @media(max-width: 768px){ .network-layout{ grid-template-columns:1fr; } }
+  @media(max-width: 600px){
+    .clientwithme li{ padding-left: 28px; }
+    .clientwithme li::before{ left: 0; }
+  }
 
   /* Section 5: about */
   .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:90px; align-items:center; }
@@ -594,7 +646,7 @@
       transparent 100%
     );   
   }
-  
+
   .about h2{ font-size:clamp(26px,3vw,34px); }
   .about p{ margin-top:14px; font-size:clamp(15px, 3.6vw, 17px); color:var(--text-soft); text-align:justify;}
 

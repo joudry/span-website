@@ -5,18 +5,15 @@
   // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
-  const scrollHint = document.getElementById('scrollHint');
+  
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open');
+  });
 
-  function updateScrollHint() {
-    if (!navLinks || !scrollHint) return;
-    const atBottom = navLinks.scrollTop + navLinks.clientHeight >= navLinks.scrollHeight - 5;
-    const needsScroll = navLinks.scrollHeight > navLinks.clientHeight;
-    scrollHint.style.opacity = (atBottom || !needsScroll) ? '0' : '1';
-  }
+  const isOpen = navLinks.classList.contains('open');
+  navToggle.setAttribute('aria-expanded', isOpen);
 
-  navLinks.addEventListener('scroll', updateScrollHint);
-  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
-  navToggle.addEventListener('click', () => setTimeout(updateScrollHint, 50)); // léger délai pour laisser le menu s'afficher;
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
   // Scroll reveal (falls back to fully visible if IntersectionObserver isn't available)
