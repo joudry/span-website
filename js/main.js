@@ -14,7 +14,10 @@
   const isOpen = navLinks.classList.contains('open');
   navToggle.setAttribute('aria-expanded', isOpen);
 
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('open');
+  }));  
 
   // Scroll reveal (falls back to fully visible if IntersectionObserver isn't available)
   if ('IntersectionObserver' in window){
