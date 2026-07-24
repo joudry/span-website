@@ -37,7 +37,7 @@
   html, body{ overflow-x: hidden; }
   h1,h2,h3,h4{font-weight:700; margin:0; letter-spacing:-0.02em; color:var(--navy-deep);}
   p{margin:0;text-align: justify;}
-  p1{margin:0;text-align: center;}
+  p1{margin:0;text-align: center;font-size:20px;}
   a{color:inherit; text-decoration:none;}
   ul{margin:0; padding:0; list-style:none;}
   img,svg{display:block; max-width:100%;}
@@ -156,8 +156,6 @@
     }
   }
 
-  
-
   .nav-links a{
     font-size:15px; 
     font-weight:600; 
@@ -195,8 +193,6 @@
   .nav-links li::marker{
     content:none !important;
   }
-
-  
   
   .nav-cta{ 
     display:flex; 
@@ -248,7 +244,7 @@
     display:none;
   }
   .mobile-only .btn-primary{
-    margin-left:28px;
+    margin-left:40px;
     margin-top:4px;
     width:75%
   }
@@ -272,9 +268,7 @@
     line-height: 1;
     margin-right: 10px;
     display: inline-block;
-  }
-
-  
+  }  
 
   @keyframes bounce {
     0%, 100% { transform: translateY(0); }
@@ -283,14 +277,16 @@
 
   @media(max-width: 900px){
     .nav-links{
-      position:fixed; top:70px; left:0; right:0; bottom:0; background:var(--bg); 
-      flex-direction:column; align-items:flex-start; 
-      padding:25px clamp(24px, 8vw, 64px) 64px; /* haut | côtés | bas */
+      position:fixed; top:70px; left:0; right:0; bottom:20; background:var(--bg); 
+      flex-direction:column; 
+      align-items:center; 
+      padding:25px clamp(24px, 8vw, 64px) 40px; /* haut | côtés | bas */
       gap:12px;
       justify-content:flex-start;
       overflow-y:auto;
       transform:translateX(100%); transition:transform .3s ease; /* display: none;*/ /* caché par défaut */
       background:var(--Teal300);    
+      font-size: 18px;
 
       /* --- Masque dynamique --- */
       -webkit-mask-image: linear-gradient(
@@ -324,10 +320,20 @@
       border-radius: 4px;
     }
 
+    /* Supprime la puce turquoise devant les liens en mobile */
+    .nav-links a::before{
+      content:none;
+    }
+
+    /* Neutralise aussi la règle spécifique mobile qui remettait la puce */
+    .mobile-only .nav-links a:not(:last-child)::before{
+      content:none;
+    }
+    
     .nav-links.open{ transform:translateX(0); background:#cef1f0}/*.nav-links.open{ display: flex; } */ /* apparaît d'un coup au clic */
     .nav-links .btn-primary span{
         color:white;
-        padding-left:14px;
+        padding-left:24px;
     }
     .nav-cta .btn-primary{ display:none; }
     .nav-cta { display:none; }

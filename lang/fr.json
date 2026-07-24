@@ -107,7 +107,7 @@
         "node3_subtitle": "CONCEPTION & DÉVELOPPEMENT", 
         "node3_text1_title": "Activités clés", 
         "node3_text1_items":[ 
-            "Définition du périmètre et des objectifs de preuve de concept (PoC), de prototype ou de MVP (approche QQOQCCP, etc.)",
+            "Définition du périmètre et des objectifs de preuve de concept (PoC), de prototype ou de MVP",
             "Évaluation de la faisabilité technique",
             "Audits techniques",
             "Revue de la documentation technique",
@@ -163,7 +163,7 @@
         "text_part4": "La vision est simple : tout projet complexe devrait bénéficier d'une véritable approche systémique, du besoin jusqu'au résultat.", 
         "sign_part1a": "Jennifer OUDRY, ", 
         "sign_part1b": "Ing. / M.Sc. / PhD.", 
-        "sign_part1c": "Responsable R&D Fractional | Partenaire en pensée systémique | Innovation en MedTech et systèmes complexes", 
+        "sign_part1c": "Responsable R&D à temps partagé | Partenaire en approche systémique | Innovation en MedTech et systèmes complexes", 
         "sign_part1d": "Certification RS6099 | PMP® – Formation validée, examen en attente", 
         "val_part1a": "Mes valeurs : ", 
         "val_part1b": "Intégrité, transparence, rigueur, curiosité scientifique, positivité." 
@@ -184,7 +184,7 @@
         
     "cta":{ 
         "title": "Échangeons autour de votre prochain projet complexe.", 
-        "subtitle_part1a": "Que vous soyez au stade du concept ou en phase de validation, ", 
+        "subtitle_part1a": "Que vous soyez au stade de concept ou en phase de validation, ", 
         "subtitle_part1b": "span ", 
         "subtitle_part1c": "vous aide à relier les noeuds.", 
         "act_step1": "Planifions un échange", 
@@ -194,6 +194,7 @@
     }, 
 
     "contact":{
+        "text": "Contactez-moi:",
         "name": "Jennifer Oudry",
         "email": "spansys.consulting@gmail.com",
         "mailto": "mailto: spansys.consulting@gmail.com",
