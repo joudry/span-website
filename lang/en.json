@@ -142,8 +142,11 @@
             "Accelerated time-to-market"
         ],
         "nodecenter_title": "span",
-        "text2": "Unlike traditional consulting focused on a single discipline, my approach integrates every critical dimension of innovation throughout the project lifecycle. The objective is to ensure that every decision strengthens the overall project rather than optimizing one discipline at the expense of another.",
-        "text3": "I help organizations:",
+        "text2a": "Unlike traditional consulting, which focuses on a single discipline, ",
+        "text2b": "span",
+        "text2c": "'s approach integrates every critical dimension of innovation throughout the project lifecycle. The objective is to ensure that every decision strengthens the overall project rather than optimizing one discipline at the expense of another.",
+        "text3a": "span ",
+        "text3b": "helps organizations:",
         "text3_item1": "navigate complexity with confidence,", 
         "text3_item2": "align multidisciplinary teams around a shared vision,",
         "text3_item3": "anticipate technical, clinical and regulatory risks,", 

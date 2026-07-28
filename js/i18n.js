@@ -23,16 +23,21 @@ async function loadLanguage(lang) {
     document.querySelectorAll("[data-i18n-attr]").forEach(element => {
         const pairs = element.dataset.i18nAttr
             .split(";")
-            .filter(p => p.trim() !== ""); // 👈 ignore les entrées vides
+            .filter(p => p.trim() !== ""); 
         pairs.forEach(pair => {
             const [attr, key] = pair.split(":").map(s => s.trim());
-            if (!attr || !key) return; // 👈 sécurité supplémentaire
+            if (!attr || !key) return; 
             const value = key.split(".").reduce((obj, i) => obj?.[i], currentTranslations);
             if (value) {
             element.setAttribute(attr, value);
             }
         });
     });
+
+    // Rafraîchit le panneau réseau si un nœud est actuellement actif
+    if (window.refreshActiveNetNode) {
+        window.refreshActiveNetNode();
+    }
 
     // Mémorise la langue choisie
     localStorage.setItem("language", lang);

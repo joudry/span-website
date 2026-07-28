@@ -60,12 +60,10 @@
       circle.setAttribute('r', 20);
       
       netDesc.querySelector('.node-subtitle').textContent = node.dataset.subtitle;
-
       netDesc.querySelector('.node-texttitle').textContent = node.dataset.texttitle;
 
       fillBlock(1, node.dataset.text1title, node.dataset.i18nList1);
       fillBlock(2, node.dataset.text2title, node.dataset.i18nList2);
-
     };
     
     const hide = () => {
@@ -76,3 +74,11 @@
     node.addEventListener('focus', show);
     node.addEventListener('mouseleave', hide);
   });
+
+  // Rendre "show" accessible depuis l'extérieur pour rafraîchir après un changement de langue
+  window.refreshActiveNetNode = function () {
+    const active = document.querySelector('.net-node.active');
+    if (active) {
+      active.dispatchEvent(new Event('mouseenter'));
+    }
+  };
